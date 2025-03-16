@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Command Syntax Reference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+            max-width: 800px;
+        }
+        h2 { color: #2c3e50; }
+        .command { 
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 3px solid #3498db;
+            font-family: monospace;
+        }
+        .output {
+            color: #27ae60;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Command Syntax Reference</h1>
+
+    <div class="section">
+        <h2>Basic Commands</h2>
+        <div class="command">set username to "John"</div>
+        <div class="output">→ Set 'username' to 'John'</div>
+        
+        <div class="command">set scores to [90,85,95]</div>
+        <div class="output">→ Set 'scores' to [90, 85, 95]</div>
+        
+        <div class="command">.if username is John then print Welcome Admin</div>
+        <div class="output">→ Output: Welcome Admin</div>
+    </div>
+
+    <div class="section">
+        <h2>Array Handling</h2>
+        <div class="command">set arr to [1,2,3]</div>
+        <div class="output">→ Set 'arr' to [1, 2, 3]</div>
+        
+        <div class="command">append 6 to arr</div>
+        <div class="output">→ Appended '6' to 'arr': [1, 2, 3, 6]</div>
+        
+        <div class="command">remove 3 from arr</div>
+        <div class="output">→ Removed '3' from 'arr': [1, 2, 6]</div>
+        
+        <div class="command">show arr[1]</div>
+        <div class="output">→ Element at index 1 in 'arr': 2</div>
+    </div>
+
+    <div class="section">
+        <h2>String Handling</h2>
+        <div class="command">set text to "HelloWorld123"</div>
+        <div class="output">→ Set 'text' to 'HelloWorld123'</div>
+        
+        <div class="command">index "World" in text</div>
+        <div class="output">→ Index of "World" in text: 5</div>
+        
+        <div class="command">remove "123" from text</div>
+        <div class="output">→ Removed "123" from text: HelloWorld</div>
+        
+        <div class="command">REVERSE text</div>
+        <div class="output">→ Result: dlroWolleH</div>
+        
+        <div class="command">UPPERCASE text</div>
+        <div class="output">→ Result: HELLOWORLD</div>
+        
+        <div class="command">LENGTH text</div>
+        <div class="output">→ Result: 10</div>
+    </div>
+
+    <div class="section">
+        <h2>Math & Calculations</h2>
+        <div class="command">ADD 25 75</div>
+        <div class="output">→ Result: 100</div>
+        
+        <div class="command">MOD 10 3</div>
+        <div class="output">→ Result: 1</div>
+        
+        <div class="command">sqrt 64</div>
+        <div class="output">→ sqrt(64): 8</div>
+        
+        <div class="command">sin 30</div>
+        <div class="output">→ sin(30): 0.5</div>
+    </div>
+
+    <div class="section">
+        <h2>Special Functions</h2>
+        <div class="command">DATETIME</div>
+        <div class="output">→ DATETIME: 2023-08-20 14:30:00</div>
+        
+        <div class="command">primecheck 17</div>
+        <div class="output">→ 17 is a prime</div>
+        
+        <div class="command">factorial 5</div>
+        <div class="output">→ Factorial of 5: 120</div>
+        
+        <div class="command">fibonacci 8</div>
+        <div class="output">→ Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13</div>
+    </div>
+
+    <div class="section">
+        <h2>Advanced Features</h2>
+        <div class="command">repeat "Hi\\n" 3</div>
+        <div class="output">
+            Hi<br>
+            Hi<br>
+            Hi
+        </div>
+        
+        <div class="command">print Current user: ${username}</div>
+        <div class="output">→ Current user: John</div>
+    </div>
+
+    <div class="section">
+        <h2>Edge Cases</h2>
+        <div class="command">DIVIDE 5 0</div>
+        <div class="output">→ ERROR: Division by zero</div>
+    </div>
+
+    <div class="section">
+        <h2>Command Sequences</h2>
+        <div class="command">
+            set message to "Hello"<br>
+            set name to "Venkat"<br>
+            .if message is "Hello" then set greeting to message + " " + name<br>
+            show greeting
+        </div>
+        <div class="output">
+            → Set 'message' to 'Hello'<br>
+            → Set 'name' to 'Venkat'<br>
+            → Set 'greeting' to 'Hello Venkat'<br>
+            → greeting: Hello Venkat
+        </div>
+
+        <div class="command">
+            set text to "I like coding in English"<br>
+            remove "coding in " from text<br>
+            remove "English" from text<br>
+            show text
+        </div>
+        <div class="output">
+            → Removed "coding in " from text: I like English<br>
+            → Removed "English" from text: I like<br>
+            → text: I like
+        </div>
+    </div>
+</body>
+</html>
